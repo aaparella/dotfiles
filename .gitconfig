@@ -1,0 +1,27 @@
+[core]
+	excludesfile = /Users/alex/.gitignore_global
+	quotepath = false
+	editor = vi
+	autocrlf = input
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[user]
+	name = Alex Parella
+	email = aaparella@ucdavis.edu
+[color]
+	ui = true
+[merge]
+	tool = opendiff
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+	sba = "!f() { git subtree add --prefix $1 $2 master --squash; }; f"
+	sbu = "!f() { git subtree pull --prefix $1 $2 master --squash; }; f"
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
+[push]
+	default = simple
