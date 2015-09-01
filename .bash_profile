@@ -14,6 +14,10 @@ export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 export EDITOR=vim
 
+# GOPATH
+export GOPATH=~/Projects/Go
+export GOBIN=$GOPATH/bin
+
 # Normal aliases
 alias ls='ls -GFh'
 alias lsa='ls -la'
@@ -22,6 +26,8 @@ alias hi="echo \"hi <3\""
 alias bye="logout"
 alias getip="ipconfig getifaddr en1"
 alias f="open -a Finder ./"
+alias vi="mvim -v"
+alias vim="mvim -v"
 
 # Lazy searches (works but fix up later)
 dash() {	
@@ -75,3 +81,6 @@ alias pgstart='/usr/local/pgsql/bin/pg_ctl -D /usr/local/pgsql/data -l logfile s
 # MacPorts Installer addition on 2015-04-15_at_20:58:32: adding an appropriate PATH variable for use with MacPorts.
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 # Finished adapting your PATH environment variable for use with MacPorts.
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
