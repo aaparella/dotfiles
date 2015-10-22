@@ -8,12 +8,17 @@ Plugin 'gmarik/Vundle.vim'
 call vundle#end()
 filetype plugin indent on
 
+set tags=./tags;
+
 execute pathogen#infect()
 set runtimepath^=~/.vim/bundle/ctrlp.vim
+
+set incsearch
 
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 
 set number
+set relativenumber
 syntax on
 set hlsearch
 set mouse=a
@@ -39,4 +44,4 @@ map <C-n> :NERDTreeToggle<CR>
 " Set up ignoring values in Nerdtree
 let NERDTreeIgnore = ['\.o$', '\.out$', '\.class$']
 
-set tabstop=2 shiftwidth=2 expandtab
+set tabstop=4 shiftwidth=4 expandtab
