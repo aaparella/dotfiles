@@ -17,6 +17,8 @@ set incsearch
 
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 
+let g:go_fmt_command = "goimports"
+
 set number
 set relativenumber
 syntax on
