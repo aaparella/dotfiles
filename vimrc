@@ -12,10 +12,7 @@ set tags=./tags;
 
 execute pathogen#infect()
 set runtimepath^=~/.vim/bundle/ctrlp.vim
-
 set incsearch
-
-let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 
 let g:go_fmt_command = "goimports"
 
@@ -42,6 +39,7 @@ hi CursorLine term=bold cterm=bold guibg=Grey40
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 " Allow for toggling of the NERDTree panel
 map <C-n> :NERDTreeToggle<CR>
+nmap 0 ^
 
 " Set up ignoring values in Nerdtree
 let NERDTreeIgnore = ['\.o$', '\.out$', '\.class$']
