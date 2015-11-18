@@ -1,4 +1,3 @@
-set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -12,12 +11,13 @@ set tags=./tags;
 
 execute pathogen#infect()
 set runtimepath^=~/.vim/bundle/ctrlp.vim
-set incsearch
 
+set incsearch
 set number
 set relativenumber
 set hlsearch
 set mouse=a
+
 colorscheme Monokai
 syntax on
 
