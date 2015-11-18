@@ -14,16 +14,15 @@ execute pathogen#infect()
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 set incsearch
 
-let g:go_fmt_command = "goimports"
-
 set number
 set relativenumber
-syntax on
 set hlsearch
 set mouse=a
 colorscheme Monokai
+syntax on
 
 imap <S-Tab> <C-P>
+nmap 0 ^
 
 augroup BgHighlight
 	autocmd!
@@ -34,14 +33,8 @@ augroup END
 set listchars=tab:>-,trail:-
 
 hi CursorLine term=bold cterm=bold guibg=Grey40
-
-" Allow for quitting to close both the nerdtree window and main window "
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-" Allow for toggling of the NERDTree panel
-map <C-n> :NERDTreeToggle<CR>
-nmap 0 ^
-
-" Set up ignoring values in Nerdtree
-let NERDTreeIgnore = ['\.o$', '\.out$', '\.class$']
-
 set tabstop=4 shiftwidth=4 expandtab
+
+let g:go_fmt_command = "goimports"
+let g:ctrlp_user_command = 'ag %s -l --hidden --nocolo -g ""'
+let g:ctrlp_use_caching = 0
