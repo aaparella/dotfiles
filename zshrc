@@ -41,6 +41,10 @@ ZSH_THEME="fishy"
 # stamp shown in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # HIST_STAMPS="mm/dd/yyyy"
+dockerstart() {
+    docker-machine start default
+    eval "$(docker-machine env default)"
+}
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
