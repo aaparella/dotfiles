@@ -62,6 +62,9 @@ export PATH=$PATH:"/Users/alex/.rvm/gems/ruby-2.2.1/bin:/Users/alex/.rvm/gems/ru
 
 export GOPATH=$HOME/Projects/Go
 export GOBIN=$GOPATH/bin
+export PATH=$PATH:$GOPATH:$GOBIN:$GOBIN/go_appengine
+
+export PATH=/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin:"${PATH}"
 
 source $ZSH/oh-my-zsh.sh
 

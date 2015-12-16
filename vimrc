@@ -3,6 +3,8 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
+Plugin 'derekwyatt/vim-scala'
+Plugin 'majutsushi/tagbar'
 
 call vundle#end()
 filetype plugin indent on
@@ -23,6 +25,7 @@ syntax on
 
 imap <S-Tab> <C-P>
 nmap 0 ^
+nmap <F8> :TagbarToggle<CR>
 
 augroup BgHighlight
 	autocmd!
