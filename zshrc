@@ -97,8 +97,3 @@ alias vim="nvim"
 alias vi="nvim"
 
 eval `boot2docker shellinit 2>/dev/null`
-
-. /Users/alex/torch/install/bin/torch-activate
-
-
-. /Users/alex/torch/install/bin/torch-activate
