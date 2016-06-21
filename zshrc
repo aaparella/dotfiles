@@ -7,6 +7,9 @@ export ZSH=/Users/alex/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="fishy"
 
+
+COMPLETION_WAITING_DOTS="true"
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -46,6 +49,24 @@ dockerstart() {
     eval "$(docker-machine env default)"
 }
 
+hackgovernment() {
+    echo "Government files unlocked"
+    mkdir government_files
+}
+
+unhackgovernment() {
+    echo "Government files relocked"
+    rmdir government_files
+}
+
+serve() {
+    eval "python -m SimpleHTTPServer"
+}
+
+ecs() {
+    cd ~/Documents/School/UCD/ECS/$1
+}
+
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
@@ -58,13 +79,14 @@ plugins=(git)
 # User configuration
 
 export PATH=$PATH:"/Users/alex/.rvm/gems/ruby-2.2.1/bin:/Users/alex/.rvm/gems/ruby-2.2.1@global/bin:/Users/alex/.rvm/rubies/ruby-2.2.1/bin:/Users/alex/.rbenv/shims:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/alex/.rvm/bin"
+export PATH=/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
 export GOPATH=$HOME/Projects/Go
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOPATH:$GOBIN:$GOBIN/go_appengine
 
-export PATH=/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin:"${PATH}"
+export PATH=/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin:"${PATH}":/Users/alex/.cargo/bin
 
 source $ZSH/oh-my-zsh.sh
 
@@ -97,3 +119,9 @@ alias vim="nvim"
 alias vi="nvim"
 
 eval `boot2docker shellinit 2>/dev/null`
+### Added by the Bluemix CLI
+source /usr/local/Bluemix/bx/zsh_autocomplete
+export PATH="/usr/local/sbin:$PATH"
+
+# zsh-bd
+. $HOME/.zsh/plugins/bd/bd.zsh
