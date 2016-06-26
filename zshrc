@@ -125,3 +125,5 @@ export PATH="/usr/local/sbin:$PATH"
 
 # zsh-bd
 . $HOME/.zsh/plugins/bd/bd.zsh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
