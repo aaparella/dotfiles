@@ -19,9 +19,10 @@ Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
 Plugin 'sophacles/vim-processing'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+Plugin 'itchyny/lightline.vim'
+Plugin 'racer-rust/vim-racer'
 Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plugin 'unblevable/quick-scope'
 
 call vundle#end()
 execute pathogen#infect()
@@ -64,9 +65,5 @@ map <up> <nop>
 map <left> <nop>
 map <down> <nop>
 map <right> <nop>
-imap <up> <nop>
-imap <left> <nop>
-imap <down> <nop>
-imap <right> <nop>
 
 filetype plugin indent on
