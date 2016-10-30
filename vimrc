@@ -4,6 +4,7 @@ syntax on
 
 set encoding=utf-8
 set clipboard=unnamed
+set ttyfast
 
 " Plugins
 
@@ -26,6 +27,8 @@ Plugin 'unblevable/quick-scope'
 
 call vundle#end()
 execute pathogen#infect()
+
+set path+=**
 
 " Automatically generated tags
 set tags=./tags;
@@ -65,5 +68,12 @@ map <up> <nop>
 map <left> <nop>
 map <down> <nop>
 map <right> <nop>
+
+let g:netrw_banner=0
+let g:netrw_browse_split=4
+let g:netrw_chgwin=1
+let g:netrw_altv=1
+let g:netrw_liststyle=3
+let g:netrw_list_hide=netrw_gitignore#Hide()
 
 filetype plugin indent on
