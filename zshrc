@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/alex/.oh-my-zsh
+export ZSH=/Users/alexanderp/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -118,12 +118,6 @@ alias tmux="TERM=screen-256color-bce tmux"
 alias vim="nvim"
 alias vi="nvim"
 
-eval `boot2docker shellinit 2>/dev/null`
-### Added by the Bluemix CLI
-source /usr/local/Bluemix/bx/zsh_autocomplete
 export PATH="/usr/local/sbin:$PATH"
-
-# zsh-bd
-. $HOME/.zsh/plugins/bd/bd.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

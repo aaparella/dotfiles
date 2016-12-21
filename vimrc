@@ -10,13 +10,17 @@ set encoding=utf-8
 " and vim-commentary.
 
 set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/.fzf
 
 " Plugins
-call vundle#begin()
-Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-easytags'
-Plugin 'tpope/vim-commentary'
-call vundle#end()
+call plug#begin()
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-easytags'
+Plug 'flazz/vim-colorschemes'
+Plug 'scrooloose/nerdtree'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'tpope/vim-commentary'
+call plug#end()
 
 " For vim-easytags
 " Automatically generated tags
@@ -35,6 +39,8 @@ let g:netrw_altv=1
 let g:netrw_liststyle=3
 let g:netrw_list_hide=netrw_gitignore#Hide()  " Ignore any files in gitignore
 
+" ------------------ Mappings --------------------
+map <C-P> :FZF<ENTER>
 
 " ------------------ UI Stuff! --------------------
 set incsearch       " Highlight searches as you type
