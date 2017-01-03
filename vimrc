@@ -20,6 +20,7 @@ Plug 'flazz/vim-colorschemes'
 Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'tpope/vim-commentary'
+Plug 'fatih/vim-go'
 call plug#end()
 
 " For vim-easytags
