@@ -2,46 +2,45 @@
 filetype off
 syntax on
 
+set ttyfast
+
 set encoding=utf-8
 
 " ------------------- Plugins! -----------------------
 " Actively trying to use as few plugins as is possible
-" Only plugins I'm currently using are easytags, vim-go
-" and vim-commentary.
 
-set rtp+=~/.vim/bundle/Vundle.vim
 set rtp+=~/.fzf
 
 " Plugins
 call plug#begin()
-Plug 'xolox/vim-misc'
-Plug 'xolox/vim-easytags'
 Plug 'flazz/vim-colorschemes'
 Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'tpope/vim-commentary'
 Plug 'fatih/vim-go'
+Plug 'elixir-lang/vim-elixir'
+Plug 'keith/swift.vim'
+Plug 'derekwyatt/vim-scala'
+Plug 'rust-lang/rust.vim'
+Plug 'kien/rainbow_parentheses.vim'
 call plug#end()
-
-" For vim-easytags
-" Automatically generated tags
-set tags=./tags;
 
 " ---------------- File Navigation -----------------
 " Allow find commands to search subdirectories
 " recursively.
 set path+=**
 
-" netrw configuration
-let g:netrw_banner=0                          " remove netrw banner
-let g:netrw_browse_split=4
-let g:netrw_chgwin=1                          " default to opening files in same buffer
-let g:netrw_altv=1
-let g:netrw_liststyle=3
-let g:netrw_list_hide=netrw_gitignore#Hide()  " Ignore any files in gitignore
+set shortmess+=c
+set belloff+=ctrlg
 
 " ------------------ Mappings --------------------
 map <C-P> :FZF<ENTER>
+
+" -- Turn off arrow keys
+map <up> <nop>
+map <left> <nop>
+map <down> <nop>
+map <right> <nop>
 
 " ------------------ UI Stuff! --------------------
 set incsearch       " Highlight searches as you type
@@ -49,12 +48,6 @@ set hlsearch        " Highlight all matches
 set number          " Line numbers
 set relativenumber  " Relative line numbers
 set mouse=a         " Allow mouse in dire situations
-
-" -- Turn off arrow keys
-map <up> <nop>
-map <left> <nop>
-map <down> <nop>
-map <right> <nop>
 
 colorscheme Monokai
 
@@ -68,6 +61,13 @@ augroup END
 " -- Highlight current line
 hi CursorLine term=bold cterm=bold guibg=Grey40
 set cursorline
+
+au FileType clojure RainbowParenthesesToggle
+au FileType clojure RainbowParenthesesLoadRound
+
+" ------------------ FileType Configurations --------
+autocmd FileType go set makeprg=go\ test\ ./...
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
 
 set tabstop=4 shiftwidth=4 expandtab
 
