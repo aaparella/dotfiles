@@ -14,15 +14,15 @@ set rtp+=~/.fzf
 " Plugins
 call plug#begin()
 Plug 'flazz/vim-colorschemes'
-Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'tpope/vim-commentary'
-Plug 'fatih/vim-go'
-Plug 'elixir-lang/vim-elixir'
-Plug 'keith/swift.vim'
-Plug 'derekwyatt/vim-scala'
-Plug 'rust-lang/rust.vim'
-Plug 'kien/rainbow_parentheses.vim'
+Plug 'fatih/vim-go', { 'for': 'go' }
+Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
+Plug 'keith/swift.vim', { 'for' : 'swift' }
+Plug 'derekwyatt/vim-scala', { 'for' : 'scala' }
+Plug 'rust-lang/rust.vim', { 'for' : 'rust' }
+Plug 'kien/rainbow_parentheses.vim', { 'for' : 'clojure' }
 call plug#end()
 
 " ---------------- File Navigation -----------------
@@ -42,6 +42,9 @@ map <left> <nop>
 map <down> <nop>
 map <right> <nop>
 
+" Write current file with sudo privileges
+cmap w!! w !sudo tee > /dev/null %
+
 " ------------------ UI Stuff! --------------------
 set incsearch       " Highlight searches as you type
 set hlsearch        " Highlight all matches
@@ -57,10 +60,6 @@ augroup BgHighlight
 	autocmd WinEnter * set cul
 	autocmd WinLeave * set nocul
 augroup END
-
-" -- Highlight current line
-hi CursorLine term=bold cterm=bold guibg=Grey40
-set cursorline
 
 au FileType clojure RainbowParenthesesToggle
 au FileType clojure RainbowParenthesesLoadRound
