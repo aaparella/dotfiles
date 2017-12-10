@@ -15,6 +15,9 @@ set rtp+=~/.fzf
 call plug#begin()
 Plug 'flazz/vim-colorschemes'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'octref/RootIgnore'
+Plug 'albfan/nerdtree-git-plugin'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'tpope/vim-commentary'
 Plug 'fatih/vim-go', { 'for': 'go' }
@@ -23,6 +26,7 @@ Plug 'keith/swift.vim', { 'for' : 'swift' }
 Plug 'derekwyatt/vim-scala', { 'for' : 'scala' }
 Plug 'rust-lang/rust.vim', { 'for' : 'rust' }
 Plug 'kien/rainbow_parentheses.vim', { 'for' : 'clojure' }
+Plug 'sheerun/vim-polyglot'
 call plug#end()
 
 " ---------------- File Navigation -----------------
@@ -53,6 +57,8 @@ set relativenumber  " Relative line numbers
 set mouse=a         " Allow mouse in dire situations
 
 colorscheme Monokai
+
+let NERDTreeRespectWildIgnore=1   
 
 " Indicate currently active window
 augroup BgHighlight

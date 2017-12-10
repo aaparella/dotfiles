@@ -1,1 +1,10 @@
-/Users/alex/.gitignore_global
+tags
+.idea
+target
+.DS_Store
+
+Dockerfile
+
+*.iml
+
+dump.rdb

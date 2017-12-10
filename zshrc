@@ -67,6 +67,14 @@ ecs() {
     cd ~/Documents/School/UCD/ECS/$1
 }
 
+decode() {
+    echo "$1" | base64 -D
+}
+
+killgrep() {
+    ps -ef | grep "$1" | grep -v grep | awk '{print $2}' | xargs kill -9
+}
+
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
@@ -76,19 +84,22 @@ ecs() {
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
+export FZF_DEFAULT_COMMAND='ag --nocolor -g ""'
+
 # User configuration
 
 export PATH=$PATH:"/Users/alex/.rvm/gems/ruby-2.2.1/bin:/Users/alex/.rvm/gems/ruby-2.2.1@global/bin:/Users/alex/.rvm/rubies/ruby-2.2.1/bin:/Users/alex/.rbenv/shims:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/alex/.rvm/bin"
 export PATH=/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
-export GOPATH=$HOME/Projects/Go
+export GOPATH=$HOME/Code/Go
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOPATH:$GOBIN:$GOBIN/go_appengine
 
 export PATH=/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin:"${PATH}":/Users/alex/.cargo/bin
 
 source $ZSH/oh-my-zsh.sh
+source $HOME/.work.zsh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -117,6 +128,8 @@ source $ZSH/oh-my-zsh.sh
 alias tmux="TERM=screen-256color-bce tmux"
 alias vim="nvim"
 alias vi="nvim"
+alias ls="exa"
+alias lst="exa --tree"
 
 export PATH="/usr/local/sbin:$PATH"
 
