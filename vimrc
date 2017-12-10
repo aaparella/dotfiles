@@ -8,6 +8,7 @@ set encoding=utf-8
 
 " ------------------- Plugins! -----------------------
 " Actively trying to use as few plugins as is possible
+" You can see how well that's worked out
 
 set rtp+=~/.fzf
 
@@ -15,7 +16,6 @@ set rtp+=~/.fzf
 call plug#begin()
 Plug 'flazz/vim-colorschemes'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'octref/RootIgnore'
 Plug 'albfan/nerdtree-git-plugin'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -67,16 +67,13 @@ augroup BgHighlight
 	autocmd WinLeave * set nocul
 augroup END
 
+" ------------------ FileType Configurations --------
+autocmd FileType go set makeprg=go\ test\ ./...
+let g:go_fmt_command = "goimports"
+
 au FileType clojure RainbowParenthesesToggle
 au FileType clojure RainbowParenthesesLoadRound
 
-" ------------------ FileType Configurations --------
-autocmd FileType go set makeprg=go\ test\ ./...
-autocmd FileType java setlocal omnifunc=javacomplete#Complete
-
 set tabstop=4 shiftwidth=4 expandtab
-
-" ----------------- Language Specific things! -------
-let g:go_fmt_command = "goimports"
 
 filetype plugin indent on
