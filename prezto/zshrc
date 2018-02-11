@@ -1,1 +1,17 @@
-/Users/alexanderp/.zshrc
+function source_if_exists {
+    [[ -s $1 ]] && source $1
+}
+
+# Source Prezto.
+source_if_exists"${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+
+source_if_exists $HOME/.work.zsh
+source_if_exists $HOME/.funcs.zsh
+source_if_exists $HOME/.path.zsh
+source_if_exists $HOME/.aliases.zsh
+
+
+# Disable autocorrection suggestions
+unsetopt CORRECT
+
+export FZF_DEFAULT_COMMAND='ag --nocolor -g ""'
