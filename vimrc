@@ -14,19 +14,20 @@ set rtp+=~/.fzf
 
 " Plugins
 call plug#begin()
-Plug 'flazz/vim-colorschemes'
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'octref/RootIgnore'
-Plug 'albfan/nerdtree-git-plugin'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'tpope/vim-commentary'
-Plug 'fatih/vim-go', { 'for': 'go' }
-Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
-Plug 'keith/swift.vim', { 'for' : 'swift' }
-Plug 'derekwyatt/vim-scala', { 'for' : 'scala' }
-Plug 'rust-lang/rust.vim', { 'for' : 'rust' }
-Plug 'kien/rainbow_parentheses.vim', { 'for' : 'clojure' }
-Plug 'sheerun/vim-polyglot'
+Plug       'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug     'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug         'albfan/nerdtree-git-plugin'
+Plug    'elixir-lang/vim-elixir', { 'for': 'elixir' }
+Plug          'flazz/vim-colorschemes'
+Plug          'tpope/vim-commentary'
+Plug 'ludovicchabant/vim-gutentags'
+Plug          'fatih/vim-go', { 'for': 'go' }
+Plug        'sheerun/vim-polyglot'
+Plug     'derekwyatt/vim-scala', { 'for' : 'scala' }
+Plug           'kien/rainbow_parentheses.vim', { 'for' : 'clojure' }
+Plug         'octref/RootIgnore'
+Plug      'rust-lang/rust.vim', { 'for' : 'rust' }
+Plug          'keith/swift.vim', { 'for' : 'swift' }
 call plug#end()
 
 " ---------------- File Navigation -----------------
