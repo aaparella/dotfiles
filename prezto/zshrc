@@ -3,7 +3,7 @@ function source_if_exists {
 }
 
 # Source Prezto.
-source_if_exists"${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+source_if_exists "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 
 source_if_exists $HOME/.work.zsh
 source_if_exists $HOME/.funcs.zsh
