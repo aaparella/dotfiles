@@ -1,0 +1,28 @@
+" General Stuff
+filetype off
+syntax on
+
+set ttyfast
+set encoding=utf-8
+set rtp+=/usr/local/opt/fzf
+
+source ~/.plugins.vim
+source ~/.functions.vim
+source ~/.ui.vim
+source ~/.mapping.vim
+
+" ---------------- File Navigation -----------------
+" Allow find commands to search subdirectories
+" recursively.
+set path+=**
+
+set shortmess+=c
+set belloff+=ctrlg
+
+augroup myvimrc
+    autocmd!
+    autocmd QuickFixCmdPost [^l]* cwindow
+    autocmd QuickFixCmdPost l*    lwindow
+augroup END
+
+filetype plugin indent on
