@@ -13,5 +13,3 @@ source_if_exists $HOME/.aliases.zsh
 
 # Disable autocorrection suggestions
 unsetopt CORRECT
-
-export FZF_DEFAULT_COMMAND='ag --nocolor -g ""'
