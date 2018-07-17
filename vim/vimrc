@@ -7,6 +7,7 @@ set encoding=utf-8
 set rtp+=/usr/local/opt/fzf
 
 source ~/.plugins.vim
+source ~/.filetype.vim
 source ~/.functions.vim
 source ~/.ui.vim
 source ~/.mapping.vim
