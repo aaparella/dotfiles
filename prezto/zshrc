@@ -10,7 +10,7 @@ source_if_exists $HOME/.funcs.zsh
 source_if_exists $HOME/.path.zsh
 source_if_exists $HOME/.aliases.zsh
 source_if_exists $HOME/.fzf.zsh
-source_if_exists $HOME/.zle.sh
+source_if_exists $HOME/.zle.zsh
 
 # Use fd for FZF file tree walking instead of find
 export FZF_DEFAULT_COMMAND='fd --type f'
