@@ -19,3 +19,5 @@ export FZF_DEFAULT_COMMAND='fd --type f'
 unsetopt correct
 unsetopt correctall
 DISABLE_CORRETION="true"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
