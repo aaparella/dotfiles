@@ -14,12 +14,22 @@ source ~/.plugins.vim
 source ~/.ui.vim
 
 " ---------------- File Navigation -----------------
-" Allow find commands to search subdirectories
-" recursively.
+" Allow find commands to search subdirectories recursively.
 set path+=**
 
 set shortmess+=c
 set belloff+=ctrlg
+
+" Insert only one space when joining lines that contain sentence-terminating
+" punctuation like `.`.
+set nojoinspaces
+
+" If a file is changed outside of vim, automatically reload it without asking
+set autoread
+
+" Don't write backup files
+set nobackup
+set nowritebackup
 
 augroup myvimrc
     autocmd!

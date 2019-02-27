@@ -17,11 +17,11 @@ Plug          'mhinz/vim-grepper',             { 'on': ['Grepper', '<plug>(Grepp
 Plug 'ludovicchabant/vim-gutentags'
 Plug          'fatih/vim-go',                  { 'for': 'go' }
 Plug        'sheerun/vim-polyglot'
-Plug       'airblade/vim-rooter'
 Plug     'derekwyatt/vim-scala',               { 'for' : 'scala' }
 Plug           'kien/rainbow_parentheses.vim', { 'for' : 'clojure' }
 Plug         'octref/RootIgnore'
 Plug      'rust-lang/rust.vim',                { 'for' : 'rust' }
+Plug     'unblevable/quick-scope',
 Plug          'keith/swift.vim',               { 'for' : 'swift' }
 Plug     'majutsushi/tagbar',                  { 'on'  : 'Tagbar' }
 call plug#end()
@@ -35,9 +35,6 @@ let g:lightline = {
 
 " vim-grepper
 nmap gs <plug>(GrepperOperator)
-
-" vim-airline
-let g:airline_theme='monochrome'
 
 " nerdtree
 let NERDTreeRespectWildIgnore=1   
