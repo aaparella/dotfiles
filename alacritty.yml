@@ -37,11 +37,11 @@ font:
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
   offset:
-    x: 0.0
-    y: 0.0
+    x: 0
+    y: 0
 
 # Should display the render timer
-render_timer: false
+# render_timer: false
 
 # Colors (Terminal.app)
 colors:
@@ -56,7 +56,7 @@ colors:
     red:     '0x990000'
     green:   '0x00a600'
     yellow:  '0x999900'
-    blue:    '0x0000b2'
+    blue:    '0x4c89c8'
     magenta: '0xb200b2'
     cyan:    '0x00a6b2'
     white:   '0xbfbfbf'
@@ -163,3 +163,7 @@ key_bindings:
 mouse_bindings:
   - { mouse: Middle, action: PasteSelection }
 
+# shell:
+#   program: /bin/zsh
+#   args:
+#     - ""
