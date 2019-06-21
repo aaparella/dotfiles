@@ -10,6 +10,7 @@ Plug          'fatih/vim-go',                  { 'for': 'go' }
 Plug           'kien/rainbow_parentheses.vim', { 'for' : 'clojure' }
 Plug      'rust-lang/rust.vim',                { 'for' : 'rust' }
 Plug     'majutsushi/tagbar',                  { 'on'  : 'Tagbar' }
+Plug 'itchyny/lightline.vim'
 call plug#end()
 
 " ----------- Plugin Mappings / Config --------------
@@ -20,3 +21,10 @@ nmap gs <plug>(GrepperOperator)
 " vim-go
 let g:go_fmt_command = "goimports"
 let g:go_def_mode = 'godef'
+
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ }
+
+" vim-airline
+let g:airline_extensions = []
