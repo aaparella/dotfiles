@@ -11,6 +11,8 @@ source ~/.functions.vim
 source ~/.leader.vim
 source ~/.mapping.vim
 source ~/.plugins.vim
+source ~/.netrw.vim
+source ~/.statusline.vim
 source ~/.ui.vim
 
 " ---------------- File Navigation -----------------

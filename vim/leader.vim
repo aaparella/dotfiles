@@ -1,3 +1,1 @@
-let mapleader = " "
-
-nmap <leader>n = :NERDTreeToggle<ENTER>
+let mapleader = ","

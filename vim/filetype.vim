@@ -2,8 +2,5 @@
 " Go
 autocmd FileType go set makeprg=go\ test\ ./...
 
+" Rust
 autocmd FileType rust set makeprg=cargo\ build
-
-" Clojure because I write in it so much, obviously
-au FileType clojure RainbowParenthesesToggle
-au FileType clojure RainbowParenthesesLoadRound
