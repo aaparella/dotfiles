@@ -1,14 +1,9 @@
-function source_if_exists {
-    [[ -s $1 ]] && source $1
-}
+source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 
-# Source Prezto.
-source_if_exists "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-
-source_if_exists $HOME/.work.zsh
-source_if_exists $HOME/.funcs.zsh
-source_if_exists $HOME/.path.zsh
-source_if_exists $HOME/.aliases.zsh
-source_if_exists $HOME/.fzf.zsh
-source_if_exists $HOME/.zle.zsh
-source_if_exists $HOME/.env.zsh
+source $HOME/.work.zsh
+source $HOME/.funcs.zsh
+source $HOME/.path.zsh
+source $HOME/.aliases.zsh
+source $HOME/.fzf.zsh
+source $HOME/.zle.zsh
+source $HOME/.env.zsh
