@@ -1,5 +1,4 @@
-source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-
+source $HOME/.prompt.zsh
 source $HOME/.work.zsh
 source $HOME/.funcs.zsh
 source $HOME/.path.zsh
@@ -7,3 +6,4 @@ source $HOME/.aliases.zsh
 source $HOME/.fzf.zsh
 source $HOME/.zle.zsh
 source $HOME/.env.zsh
+source $HOME/.setopt.zsh

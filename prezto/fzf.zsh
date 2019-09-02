@@ -11,6 +11,3 @@ fi
 # Key bindings
 # ------------
 source "/Users/alexanderp/.fzf/shell/key-bindings.zsh"
-
-# Use fd for FZF file tree walking instead of find
-export FZF_DEFAULT_COMMAND='fd --type f'
