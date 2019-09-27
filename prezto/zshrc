@@ -1,5 +1,5 @@
 source $HOME/.prompt.zsh
-source $HOME/.work.zsh
+[ -f ~/.work.zsh] && source $HOME/.work.zsh
 source $HOME/.funcs.zsh
 source $HOME/.path.zsh
 source $HOME/.aliases.zsh
