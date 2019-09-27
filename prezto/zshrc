@@ -7,3 +7,5 @@ source $HOME/.fzf.zsh
 source $HOME/.zle.zsh
 source $HOME/.env.zsh
 source $HOME/.setopt.zsh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
