@@ -12,7 +12,7 @@ Plug 'kien/rainbow_parentheses.vim', { 'for' : 'clojure' }
 Plug 'rust-lang/rust.vim', { 'for' : 'rust' }
 Plug 'majutsushi/tagbar', { 'on'  : 'Tagbar' }
 Plug 'scrooloose/nerdtree' , { 'on': 'NERDTreeToggle' },
-Plug 'albfan/nerdtree-git-plugin', { 'on': 'NERDTreeToggle' },
+Plug 'rhysd/git-messenger.vim'
 call plug#end()
 
 " ----------- Plugin Mappings / Config --------------
@@ -23,6 +23,7 @@ nmap gs <plug>(GrepperOperator)
 " vim-go
 let g:go_fmt_command = "goimports"
 let g:go_def_mode = 'godef'
+let g:go_doc_popup_window = 1
 
 " vim-lightline
 let g:lightline = { 'colorscheme': 'wombat' }
