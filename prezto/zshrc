@@ -1,5 +1,5 @@
 source $HOME/.prompt.zsh
-[ -f ~/.work.zsh] && source $HOME/.work.zsh
+[ -f ~/.work.zsh ] && source $HOME/.work.zsh
 source $HOME/.funcs.zsh
 source $HOME/.path.zsh
 source $HOME/.aliases.zsh
@@ -9,3 +9,6 @@ source $HOME/.env.zsh
 source $HOME/.setopt.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# TODO fix this
+eval "$(jenv init -)"
