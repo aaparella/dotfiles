@@ -1,10 +1,23 @@
 tags
+tags.lock
+*.iml
+*.class
 .idea
 target
 .DS_Store
+*.pyc
+.gradle
+build
 
-Dockerfile
+.java-version
+node_modules
 
-*.iml
+# How do you make redis not save these FFS
+*.rdb
 
-dump.rdb
+.jenv
+
+.terraform
+
+# Too hard to explain
+.writ
