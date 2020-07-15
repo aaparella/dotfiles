@@ -6,13 +6,13 @@ set ttyfast
 set encoding=utf-8
 set rtp+=/usr/local/opt/fzf
 
-source ~/.filetype.vim
-source ~/.functions.vim
-source ~/.leader.vim
-source ~/.mapping.vim
-source ~/.plugins.vim
-source ~/.netrw.vim
-source ~/.ui.vim
+source ~/.config/nvim/filetype.vim
+source ~/.config/nvim/functions.vim
+source ~/.config/nvim/leader.vim
+source ~/.config/nvim/mapping.vim
+source ~/.config/nvim/plugins.vim
+source ~/.config/nvim/netrw.vim
+source ~/.config/nvim/ui.vim
 
 " ---------------- File Navigation -----------------
 " Allow find commands to search subdirectories recursively.
@@ -20,6 +20,7 @@ set path+=**
 
 set shortmess+=c
 set belloff+=ctrlg
+set nofixendofline
 
 " Insert only one space when joining lines that contain sentence-terminating
 " punctuation like `.`.
