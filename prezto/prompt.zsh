@@ -32,11 +32,15 @@ function abbreviated_pwd {
     print "$prefix$suffix"
 }
 
+function git_branch {
+    git branch --show-current 2> /dev/null
+}
+
 source $HOME/Code/gitstatus/gitstatus.plugin.zsh
 
 function update_prompt {
   PROMPT="%n@%m %F{2}$(abbreviated_pwd)%F{7}> "
-  # RPROMPT=''
+  RPROMPT='$(git_branch)'
 
   # if gitstatus_query MY && [[ $VCS_STATUS_RESULT == ok-sync ]]; then
   #   RPROMPT=${${VCS_STATUS_LOCAL_BRANCH:-@${VCS_STATUS_COMMIT}}//\%/%%}  # escape %
