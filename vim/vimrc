@@ -22,6 +22,8 @@ set shortmess+=c
 set belloff+=ctrlg
 set nofixendofline
 
+let g:presence_log_level="debug"
+
 " Insert only one space when joining lines that contain sentence-terminating
 " punctuation like `.`.
 set nojoinspaces

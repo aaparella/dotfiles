@@ -11,8 +11,9 @@ Plug 'itchyny/lightline.vim'
 Plug 'kien/rainbow_parentheses.vim', { 'for' : 'clojure' }
 Plug 'rust-lang/rust.vim', { 'for' : 'rust' }
 Plug 'majutsushi/tagbar', { 'on'  : 'Tagbar' }
-Plug 'scrooloose/nerdtree' , { 'on': 'NERDTreeToggle' },
+Plug 'scrooloose/nerdtree', { 'on' : 'NERDTreeToggle' }
 Plug 'rhysd/git-messenger.vim'
+Plug 'flazz/vim-colorschemes'
 call plug#end()
 
 " ----------- Plugin Mappings / Config --------------

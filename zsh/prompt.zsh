@@ -36,8 +36,6 @@ function git_branch {
     git branch --show-current 2> /dev/null
 }
 
-source $HOME/Code/gitstatus/gitstatus.plugin.zsh
-
 function update_prompt {
   PROMPT="%n@%m %F{2}$(abbreviated_pwd)%F{7}> "
   RPROMPT='$(git_branch)'
