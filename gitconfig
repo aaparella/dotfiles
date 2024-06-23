@@ -1,0 +1,51 @@
+[core]
+	editor = nvim
+	excludesfile = ~/.gitignore_global
+    pager = delta
+[user]
+	name = Alex Parella
+	email = alexanderp@zillowgroup.com
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    cb = branch --show-current
+    dc = diff --cached
+    ds = diff --cached
+    stat = status --short
+    touch = commit --amend --no-edit --date=now
+    d = diff \
+  --minimal \
+  --word-diff=color \
+  --word-diff-regex='([0-9@A-Za-z]+|[^0-9@A-Za-z()]+|[()])'
+[status]
+    short = false
+[color]
+	ui = true
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = yellow
+	frag = magenta bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+[pull]
+	ff = only
+
+[add.interactive]
+    useBuiltin = false # required for git 2.37.0
+
+[delta]
+    side-by-side = true
+    line-numbers = true
+    navigate = true    # use n and N to move between diff sections
+    light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default
